@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <title>Search — Wireframe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <div class="brand-title">Paradigm Pet Professionals</div>
+            <div class="brand-subtitle">Wireframe • Search</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="dogs.html">Dogs</a>
+          <a href="cat.html">Cat</a>
+          <a href="small-animals.html">Small-Animals</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <form class="search" role="search" action="search.html" method="get">
+            <label class="badge" for="nav-q">Search</label>
+            <input id="nav-q" name="q" type="search" placeholder="Search…" />
+            <button type="submit">Go</button>
+          </form>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <div class="kicker">Utility page</div>
+        <h1 class="h1">Search</h1>
+        <p class="p" id="summary">Enter a query to see matching pages.</p>
+      </section>
+
+      <section class="card" style="margin-top: 12px">
+        <h2 class="h2">Results</h2>
+        <div id="results" class="grid" style="margin-top: 14px"></div>
+      </section>
+    </main>
+
+    <footer class="footer" style="margin-top: 24px">
+      <div class="container footer-inner">
+        <span>© 2026 Paradigm Pet Professionals (Wireframe)</span>
+        <a href="index.html" style="color:inherit">Back to Home</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
