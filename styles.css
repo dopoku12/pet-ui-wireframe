@@ -1,13 +1,14 @@
 :root {
-  --navy: #003B6D;
-  --blue: #6699CC;
-  --page: #BDBDBD;
-  --card: #FFFFFF;
-  --text: #003B6D;
-  --muted: #676767;
-  --stroke: #676767;
-  --stroke-soft: #BDBDBD;
-  --focus: #6699CC;
+  /* Mid-fidelity wireframe palette (grayscale) */
+  --navy: #2f2f2f;
+  --blue: #5f5f5f;
+  --page: #f1f1f1;
+  --card: #ffffff;
+  --text: #111111;
+  --muted: #3f3f3f;
+  --stroke: #7a7a7a;
+  --stroke-soft: #c9c9c9;
+  --focus: #000000;
 }
 
 * { box-sizing: border-box; }
@@ -33,7 +34,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--navy);
+  background: var(--page);
   border-bottom: 1px solid var(--stroke);
 }
 
@@ -51,21 +52,15 @@ body {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text);
 }
 
 .logo {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: repeating-linear-gradient(
-    45deg,
-    #fff,
-    #fff 8px,
-    #f9fafb 8px,
-    #f9fafb 16px
-  );
+  border-radius: 3px;
+  border: 2px dashed var(--stroke);
+  background: #e3e3e3;
 }
 
 .brand-title {
@@ -74,7 +69,7 @@ body {
 
 .brand-subtitle {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
 }
 
 .nav {
@@ -87,22 +82,18 @@ body {
 .nav a {
   display: inline-block;
   padding: 8px 10px;
-  border-radius: 10px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text);
   border: 1px solid transparent;
 }
 
 .nav a:hover {
-  border-color: transparent;
-  background: var(--blue);
-  color: #fff;
+  text-decoration: underline;
 }
 
 .nav a[aria-current="page"] {
-  border-color: transparent;
-  background: rgba(255, 255, 255, 0.12);
-  font-weight: 600;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 .search {
@@ -110,9 +101,9 @@ body {
   align-items: center;
   gap: 8px;
   padding: 6px 8px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--stroke);
+  border-radius: 3px;
+  background: transparent;
 }
 
 .search input {
@@ -121,24 +112,24 @@ body {
   outline: none;
   font-size: 14px;
   background: transparent;
-  color: #fff;
+  color: var(--text);
 }
 
 .search input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--muted);
 }
 
 .search button {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--stroke);
+  border-radius: 3px;
+  background: transparent;
   padding: 6px 10px;
   cursor: pointer;
-  color: #fff;
+  color: var(--text);
 }
 
 .search button:hover {
-  background: var(--blue);
+  background: #e6e6e6;
 }
 
 .search :focus-visible {
@@ -172,7 +163,7 @@ main {
 .card {
   border: 1px solid var(--stroke);
   background: var(--card);
-  border-radius: 14px;
+  border-radius: 4px;
   padding: 16px;
 }
 
@@ -195,14 +186,8 @@ main {
 
 .placeholder {
   border: 2px dashed var(--stroke);
-  border-radius: 12px;
-  background: repeating-linear-gradient(
-    135deg,
-    #fff,
-    #fff 10px,
-    #f9fafb 10px,
-    #f9fafb 20px
-  );
+  border-radius: 3px;
+  background: #e7e7e7;
 }
 
 .ph-hero { height: 220px; }
@@ -225,7 +210,7 @@ main {
 
 .footer {
   border-top: 1px solid var(--stroke);
-  background: var(--navy);
+  background: var(--page);
   padding: 18px 0;
 }
 
@@ -235,17 +220,17 @@ main {
   gap: 10px;
   align-items: center;
   justify-content: space-between;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text);
   font-size: 14px;
 }
 
 .badge {
   display: inline-block;
   padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  border: 1px solid var(--stroke);
+  background: transparent;
+  color: var(--text);
   font-size: 12px;
 }
 
@@ -261,23 +246,23 @@ main {
   align-items: center;
   gap: 8px;
   padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--navy);
-  background: var(--navy);
-  color: #fff;
+  border-radius: 3px;
+  border: 1px solid var(--stroke);
+  background: transparent;
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
 }
 
-.btn:hover { background: var(--blue); border-color: var(--blue); }
+.btn:hover { background: #e6e6e6; }
 
 .btn.secondary {
   border-color: var(--stroke);
-  background: var(--card);
+  background: transparent;
   color: var(--text);
 }
 
-.btn.secondary:hover { background: rgba(102, 153, 204, 0.12); }
+.btn.secondary:hover { background: #e6e6e6; }
 
 hr.sep {
   border: none;
